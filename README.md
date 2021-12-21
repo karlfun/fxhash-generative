@@ -2,7 +2,7 @@
 generative art on tezos.
 
 ## Project
-This project is designed to have four layers of images called randomly. 
+This project is designed to have four layers of stacked images, called randomly. 
 Currently they are set up as Background, Border, Gesture, and Texture. 
 
 Use this code to set up a generative, layered-image project on https://www.fxhash.xyz/
