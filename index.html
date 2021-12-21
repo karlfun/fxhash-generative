@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>generative art</title>
+<script id="fxhash-snippet">
+      //---- do not edit the following code (you can indent as you wish)
+      let alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ"
+      var fxhash = "oo" + Array(49).fill(0).map(_=>alphabet[(Math.random()*alphabet.length)|0]).join('')
+      let b58dec = (str) => str.split('').reduce((p,c,i) => p + alphabet.indexOf(c) * (Math.pow(alphabet.length, str.length-i-1)), 0)
+      let fxhashTrunc = fxhash.slice(2)
+      let regex = new RegExp(".{" + ((fxhash.length/4)|0) + "}", 'g')
+      let hashes = fxhashTrunc.match(regex).map(h => b58dec(h))
+      let sfc32 = (a, b, c, d) => {
+        return () => {
+          a |= 0; b |= 0; c |= 0; d |= 0
+          var t = (a + b | 0) + d | 0
+          d = d + 1 | 0
+          a = b ^ b >>> 9
+          b = c + (c << 3) | 0
+          c = c << 21 | c >>> 11
+          c = c + t | 0
+          return (t >>> 0) / 4294967296
+        }
+      }
+      var fxrand = sfc32(...hashes)
+      //---- /do not edit the following code
+    </script>
+<style>
+.box{
+	width:800px;
+	height:800px;
+	position: absolute;
+	top:100px;
+	margin:0 auto;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+<img src="images/spacer.gif" width="800" height="800" id="myPicture" alt="some image" />
+</div>
+
+<div class="box">
+<img src="images/spacer.gif" width="800" height="800" id="myPicture2" alt="some image" />
+</div>
+
+<div class="box">
+<img src="images/spacer.gif" width="800" height="800" id="myPicture3" alt="some image" />
+</div>
+
+<div class="box">
+<img src="images/spacer.gif" width="800" height="800" id="myPicture4" alt="some image" />
+</div>
+
+
+<script>
+
+// this function can be repeated, but you have to change the names:
+// names to change -
+// myPix, choosePic, randomNum, myPicture (img id), choosePic (function call at the end)
+
+
+
+
+
+// first one
+
+var myPix = new Array("bg01.png","bg02.png","bg03.png");
+
+function choosePic() {
+	randomNum = Math.floor((fxrand() * myPix.length));
+	document.getElementById("myPicture").src = myPix[randomNum];
+}
+
+choosePic();
+
+
+
+
+// second one
+
+var myPix2 = new Array("bd01.png","bd02.png","bd03.png");
+
+function choosePic2() {
+	randomNum2 = Math.floor((fxrand() * myPix2.length));
+	document.getElementById("myPicture2").src = myPix2[randomNum2];
+}
+
+choosePic2();
+
+
+
+
+// third one
+
+var myPix3 = new Array("gs01.png","gs02.png","gs03.png");
+
+function choosePic3() {
+	randomNum3 = Math.floor((fxrand() * myPix3.length));
+	document.getElementById("myPicture3").src = myPix3[randomNum3];
+}
+
+choosePic3();
+
+
+
+
+// fourth one
+
+var myPix4 = new Array("tx01.png","tx02.png","tx03.png");
+
+function choosePic4() {
+	randomNum4 = Math.floor((fxrand() * myPix4.length));
+	document.getElementById("myPicture4").src = myPix4[randomNum4];
+}
+
+choosePic4();
+
+
+
+</script>
+
+
+
+</body>
+</html>
