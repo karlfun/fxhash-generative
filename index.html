@@ -26,8 +26,10 @@
         }
       }
       var fxrand = sfc32(...hashes)
-      //---- /do not edit the following code
+      //---- /do not edit the previous code
     </script>
+		
+	
 <style>
 * {
   box-sizing: border-box;
@@ -50,23 +52,25 @@ body{
 	height:auto;
 }
 </style>
+
+
 </head>
 <body>
 
 <div class="box">
-	<img src="xyz.png" id="myPicture" alt="some image" class="responsive" />
+	<img src="xyz.png" id="myPicture" alt="background" class="responsive" />
 </div>
 
 <div class="box">
-	<img src="xyz.png" id="myPicture2" alt="some image" class="responsive" />
+	<img src="xyz.png" id="myPicture2" alt="border" class="responsive" />
 </div>
 
 <div class="box">
-	<img src="xyz.png" id="myPicture3" alt="some image" class="responsive" />
+	<img src="xyz.png" id="myPicture3" alt="gesture" class="responsive" />
 </div>
 
 <div class="box">
-	<img src="spacer.png" id="myPicture4" alt="some image" class="responsive" />
+	<img src="spacer.png" id="myPicture4" alt="texture" class="responsive" />
 </div>
 
 
@@ -94,6 +98,9 @@ function choosePic() {
 
 choosePic();
 
+console.log(myPix[randomNum]); 
+
+// print to the console which image was chosen
 
 
 
@@ -108,7 +115,7 @@ function choosePic2() {
 
 choosePic2();
 
-
+console.log(myPix2[randomNum2]); 
 
 
 // third one
@@ -122,25 +129,44 @@ function choosePic3() {
 
 choosePic3();
 
+console.log(myPix3[randomNum3]); 
+
 
 
 
 // fourth one
-//
-//var myPix4 = new Array("tx01.png","tx02.png","tx03.png");
-//
-//function choosePic4() {
-//	randomNum4 = Math.floor((fxrand() * myPix4.length));
-//	document.getElementById("myPicture4").src = myPix4[randomNum4];
-//}
-//
-//choosePic4();
+
+var myPix4 = new Array("tx01.png","tx02.png","tx03.png");
+
+function choosePic4() {
+	randomNum4 = Math.floor((fxrand() * myPix4.length));
+	document.getElementById("myPicture4").src = myPix4[randomNum4];
+}
+
+choosePic4();
+
+console.log(myPix4[randomNum4]); 
+
 
 
 
 </script>
 
+<script>
 
+console.log(fxhash)   // the 64 character hex number fed to your algorithm
+console.log(fxrand()) // deterministic PRNG function, use it instead of Math.random()
+
+// showing fxhash features - which image was chosen. currently only shows filename.
+
+window.$fxhashFeatures = {
+  "Background": (myPix[randomNum]),
+  "Border": (myPix2[randomNum2]),
+  "Gesture": (myPix3[randomNum3]),
+  "Texture": (myPix4[randomNum4])
+}
+
+</script>
 
 </body>
 </html>
