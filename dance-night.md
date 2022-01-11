@@ -5,11 +5,11 @@ A celebration of shapes, color, and light - and the delightful surprise of unexp
 Hand-drawn vector images, layered with CSS, randomized with javascript. 
 
 Features:
-* 7 different backgrounds
+* 6 different backgrounds
 * 9 different borders
 * 23 different gestures
-* 9 different textures
+* 8 different textures
 
-More than 13,000 possible combinations. 
+Almost 10,000 possible combinations. 
 
 Artwork copyright Nuflark 2022. Code free to use under MIT License. https://github.com/karlfun/fxhash-generative
