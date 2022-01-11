@@ -12,4 +12,7 @@ Features:
 
 A total of 12,500 possible combinations. 
 
-Copyright Nuflark 2022. 
+Artwork copyright Nuflark 2022. 
+
+Code free to use under MIT License. 
+https://github.com/karlfun/fxhash-generative
