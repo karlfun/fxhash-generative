@@ -1,4 +1,4 @@
-# Dancce Night
+# Dance Night
 
 A celebration of shapes, color, and light - and the delightful surprise of unexpected combinations. What will the music be like? Who will dance with you tonight? 
 
