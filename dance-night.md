@@ -8,8 +8,10 @@ Features:
 * 3 different backgrounds
 * 9 different borders
 * 23 different gestures
-* 8 different textures
+* 7 different textures
 
-Almost 5,000 possible combinations. 
+More than 4,000 possible combinations. 
 
-Artwork copyright Nuflark 2022. Code free to use under MIT License. https://github.com/karlfun/fxhash-generative
+Artwork copyright Nuflark 2022. Code free to use under MIT License. 
+
+Tag me https://twitter.com/enuflark on twitter to share screenshots of your faves! 
